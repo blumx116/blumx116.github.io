@@ -3,4 +3,10 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: home
+cover-photo: assets/images/bannerHD.jpg
+cover-photo-alt: "Beautiful Beach Photograph by Taiwan Nans0410"
+icon: fa-home
 ---
+
+
+This is the home page.

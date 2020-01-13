@@ -40,9 +40,11 @@ plugins:
   - jekyll-feed
 collections:
   - sections
-avatar: resources/ksa.png
-cover-photo: resources/banner.jpg
-
+avatar: assets/images/ksa.png
+gems:
+  - jekyll-font-awesome-sass
+font-awesome:
+  assets: true
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
