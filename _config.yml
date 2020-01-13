@@ -24,7 +24,8 @@ plugins:
   - jekyll-feed
   - jemoji
   - jekyll-include-cache
-title: Your awesome title
+title: Carter Blum's Blog
+subtitle: There's Always Another 'Why'
 email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
   This is Carter Blum's blog for logging ideas and musings. Currently under construction.
@@ -40,6 +41,7 @@ plugins:
 collections:
   - sections
 avatar: resources/ksa.png
+cover-photo: resources/banner.jpg
 
 # Exclude from processing.
 # The following items will not be processed, by default.
