@@ -6,6 +6,7 @@ layout: home
 cover-photo: assets/images/bannerHD.jpg
 cover-photo-alt: "Beautiful Beach Photograph by Taiwan Nans0410"
 icon: fa-home
+title: Home
 ---
 
 

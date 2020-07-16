@@ -26,7 +26,7 @@ plugins:
   - jekyll-include-cache
 title: Carter Blum's Blog
 subtitle: There's Always Another 'Why'
-email: your-email@example.com
+email: blumx116@umn.edu
 description: >- # this means to ignore newlines until "baseurl:"
   This is Carter Blum's blog for logging ideas and musings. Currently under construction.
 baseurl: "" # the subpath of your site, e.g. /blog
@@ -43,6 +43,7 @@ collections:
 avatar: assets/images/ksa.png
 gems:
   - jekyll-font-awesome-sass
+plugins: ['jekyll/scholar']
 font-awesome:
   assets: true
 # Exclude from processing.
