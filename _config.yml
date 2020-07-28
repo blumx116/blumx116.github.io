@@ -35,7 +35,7 @@ twitter_username: jekyllrb
 github_username:  jekyll
 
 # Build settings
-remote_theme: chrisbobbe/jekyll-theme-prologue
+# remote_theme: chrisbobbe/jekyll-theme-prologue
 plugins:
   - jekyll-feed
 collections:
@@ -65,3 +65,4 @@ font-awesome:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+mail: blumx116@umn.edu
