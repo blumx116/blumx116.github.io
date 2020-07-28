@@ -1107,3 +1107,24 @@
 			}
 
 	}
+.fading-image {
+	opacity: 1;
+	transition: 0.5s ease;
+	min-height: 400px;
+	max-height: 400px;
+	width: 100%;
+	object-fit: cover;
+}
+.fading-image:hover {
+	opacity: 0.1;
+}
+.fading-text {
+	opacity: 0;
+	transition: 0.5s ease;
+	margin-top: -400px;
+}
+.fading-text:hover {
+	opacity: 1;
+}
+.stacker {
+}

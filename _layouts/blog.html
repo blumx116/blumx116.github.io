@@ -21,7 +21,7 @@ layout: default
 			{%- capture _excerpt -%}<p>{{- _post.excerpt | strip_html | truncatewords: 100 -}}</p>{%- endcapture -%}
 			{%- capture _link -%}<a href="{{- _post.url | absolute_url -}}">read more</a>{%- endcapture -%}
 			{%- assign _content = _excerpt | append: _link -%}
-			{%- include blog_preview.html title=_title subtitle=_subtitle content=_content photo=_post.cover-photo photo-alt=_post.cover-photo-alt -%}
+			{%- include blog_preview_new.html title=_title subtitle=_subtitle content=_content photo=_post.cover-photo photo-alt=_post.cover-photo-alt -%}
 		{%- endif -%}
 	{%- endfor -%}
 </div>
