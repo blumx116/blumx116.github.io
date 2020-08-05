@@ -6,6 +6,7 @@ date:   2019-1-13 1:39:00 -0600
 categories: blog
 cover-photo: assets/images/bannerHD.jpg
 cover-photo-alt: "Beautiful Beach Photograph by Taiwan Nans0410"
+icon: fa-pencil-alt
 ---
 
 ## What's all of this about?
