@@ -5,7 +5,8 @@ layout: default
 <!-- Main -->
 <div id="main">
 	{%- if page.content != "" -%}
-		{%- include section.html title=page.title photo=page.cover-photo photo-alt=page.cover-photo-alt auto-header=page.auto-header content=page.content -%}
+		{%- include post_header.html photo=page.cover-photo photo-alt=page.cover-photo-alt auto-header=page.auto-header -%}
+		<!-- {%- include section.html title=page.title photo=page.cover-photo photo-alt=page.cover-photo-alt auto-header=page.auto-header content=page.content -%} -->
 	{%- endif -%}
 	<!-- Post -->
 	<article class="shade-two">
