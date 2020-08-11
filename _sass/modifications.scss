@@ -1,0 +1,122 @@
+.fading-image {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  bottom: 0;
+  opacity: 1;
+  transition: 0.5s ease;
+  min-height: 400px;
+  max-height: 400px;
+  min-width: 100%;
+  object-fit: cover;
+}
+.stacker:hover .fading-image {
+  opacity: 0.1;
+}
+.fading-text {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: 0.5s ease;
+  min-height: 100%;
+  max-height: 100%;
+  min-width: 100%;
+  max-width: 100%;
+}
+.stacker:hover .fading-text{
+  opacity: 1;
+}
+.stacker {
+  position: relative;
+  min-height: 400px;
+}
+
+#nav {
+  #logo {
+    h1 {
+      font-size: 125%;
+    }
+  }
+  table {
+    background: #222528;
+    width: 100%;
+    margin-top: 1.25em;
+
+    tr {
+      color: #6a737d;
+
+      &.active {
+        background-color: rgba(0, 0, 0, 0.15);
+      }
+
+      &.row-divide {
+        border-bottom-color: #6a737d;
+        border-bottom-style: inset;
+        border-bottom-width: 2px;
+      }
+
+      &:hover {
+        .col-left {
+          color: #E27689;
+          border-bottom-color: rgba(255, 255, 255, 0);
+        }
+
+        .col-right{
+          color: #f1f8ff !important;
+          border-bottom-color: rgba(255, 255, 255, 0);
+        }
+      }
+
+      td {
+        position: relative;
+        padding-bottom: 0.25em;
+        padding-top: 0.5em;
+        font-size: 90%;
+
+        &.col-left {
+          padding-left: 1em;
+          width: 55px;
+          text-align: left;
+          text-decoration: none;
+
+          a.active {
+            color: #E27689;
+          }
+        }
+
+        &.col-right {
+          width: 220px;
+          padding-right: 2em;
+          text-decoration: none;
+
+          a.active {
+            color: #f1f8ff;
+          }
+        }
+
+        &.title-row {
+          padding-bottom: 1.25em;
+        }
+      }
+    }
+  }
+
+  a {
+    border-bottom: none;
+  }
+
+  .icon {
+    text-align: right;
+    display: inline-block;
+    width: 100%;
+  }
+}
+
+.icon:hover {
+  color: #E27689 !important;
+  border-bottom-color: rgba(255, 255, 255, 0) !important;
+}

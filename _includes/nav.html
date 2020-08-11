@@ -23,11 +23,11 @@
         {%- comment -%}<!-- page.url (no underscore) is the url of the current page-->{%- endcomment -%}
         {%- if _page.url == page.url -%}
           <li><a href="#" id="{{- _slug -}}" class="active">
-            <span class="{{ _class }} {{ _icon }}">{{- _title -}}</span>
+            <span class="{{ _class }} {{ _icon }}"></span>{{- _title -}}
           </a></li>
         {%- elsif _page.url -%}
           <li><a href="{{- _page.url | absolute_url -}}" id="{{- _slug -}}-link">
-            <span class="{{ _class }} {{ _icon }}">{{- _title -}}</span>
+            <span class="{{ _class }} {{ _icon }}"></span>{{- _title -}}
           </a></li>
         {%- else -%}
           <li><a href="{{- '/' | absolute_url -}}" id="broken-link"><span class="icon fa-unlink">[broken link]</span></a></li>
@@ -49,7 +49,12 @@
           {%- else -%}
             {%- assign _class = 'icon' -%}
           {%- endif -%}
-          <li><a href="#{{- _slug -}}" id="{{- _slug -}}-link" class="scrolly"><span class="{{ _class }} {{ _icon }}" >{{- _title -}}</span></a></li>
+          <li>
+            <a href="#{{- _slug -}}" id="{{- _slug -}}-link" class="scrolly">
+              <span class="{{ _class }} {{ _icon }}" ></span>
+              <span class="nav-sub-name">{{- _title | truncate: 25 -}}</span>
+            </a>
+          </li>
         {%- endif -%}
       {%- endfor -%}
     {%- endunless -%}

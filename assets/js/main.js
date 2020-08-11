@@ -66,8 +66,9 @@
 								.addClass('scrollzer-locked');
 
 						// Set this link to active
-							t.addClass('active');
-
+							parent_row = t.parents('tr');
+							associated_links = parent_row.find('a');
+							associated_links.addClass('active');
 					});
 
 			// Initialize scrollzer.

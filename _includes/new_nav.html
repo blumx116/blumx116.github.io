@@ -1,0 +1,68 @@
+{%- comment -%}
+Include vars:
+section_items
+{%- endcomment -%}
+
+<nav id="nav">
+    {%- assign _pages = site.html_pages | where_exp: "page", "page.hide != true" -%}
+
+    <table id="nav-table">
+        {%- include blog_title.html -%}
+        {%- unless _pages == null -%}
+            {%- assign _pages = _pages | sort: 'order' -%}
+            {%- for _page in _pages -%}
+                {%- assign _title = _page.title | default: _page.layout -%}
+                {%- assign _slug = _title | slugify -%}
+                {%- assign _icon = _page.icon | default: 'fa-link' -%}
+                {%- if _page.url == page.url -%}
+                    {%- assign _href = "#" -%}
+                    {%- assign _class = _slug -%}
+                    {%- assign _active = " active" -%}
+                {%- else -%}
+                    {%- assign _href = _page.url | absolute_url -%}
+                    {%- assign _class = _slug  | append: "-link" -%}
+                    {%- assign _active = " " -%}
+                {%- endif -%}
+                <tr class="{{- _active _}}">
+                    <td class="col-left">
+                        <a href="{{- _href -}}" class="{{- _class -}}{{- _active -}}">
+                            <span class="{{ _icon }} icon"></span>
+                        </a>
+                    </td>
+                    <td class="col-right">
+                        <a href="{{- _href -}}" class="{{- _class -}}{{- _active -}}">
+                            {{- _title -}}
+                        </a>
+                    </td>
+                </tr>
+            {%- endfor -%}
+        {%- assign _sections = include.section_items | where_exp: "section", "section.hide != true" -%}
+        {%- if _pages[0] and _sections[0] -%}
+            <tr class="row-divide">
+                <td></td><td></td>
+            </tr>
+        {%- endif -%}
+        {%- unless _sections == null -%}
+            {%- for _sect in _sections -%}
+                {%- if _sect.category == page.category -%}
+                    {%- assign _title = _sect.title | default: _sect.layout | default: 'Untitled' -%}
+                    {%- assign _slug = _title | slugify -%}
+                    {%- assign _icon = _sect.icon | default: 'fa-file' -%}
+                    <tr class="nav-article">
+                        <td class="col-left">
+                            <a href="#{{- _slug -}}" id="{{- _slug -}}-link" class="scrolly">
+                                <span class="icon {{ _icon }}" ></span>
+                            </a>
+                        </td>
+                        <td class="col-right">
+                            <a href="#{{- _slug -}}" id="{{- _slug -}}-link" class="scrolly">
+                                <span class="nav-sub-name">{{- _title | truncate: 25 -}}</span>
+                            </a>
+                        </td>
+                    </tr>
+                {%- endif -%}
+            {%- endfor -%}
+        {%- endunless -%}
+        {%- endunless -%}
+    </table>
+</nav>
