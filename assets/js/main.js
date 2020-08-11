@@ -121,14 +121,14 @@
 
 function contract_bar(el) {
 	el = jQuery(el);
-	el.find('.col-right').addClass('collapsed');
+	el.find('.col-right').addClass('collapsed-td');
 	el.addClass('collapsed-header');
 	jQuery("#main, #footer").css('margin-left', '75px');
 }
 
 function expand_bar(el) {
 	el = jQuery(el);
-	el.find('.collapsed').removeClass('collapsed');
+	el.find('.collapsed-td').removeClass('collapsed-td');
 	el.removeClass('collapsed-header');
 	jQuery("#main, #footer").css('margin-left', '375px');
 }
