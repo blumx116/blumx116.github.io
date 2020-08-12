@@ -17,6 +17,12 @@ optional:
 {%- if _size == 'small' -%}
     {%- assign _width = 60 -%}
     {%- assign _margin = 20 -%}
+{%- elsif _size == 'vsmall' -%}
+    {%- assign _width = 40 -%}
+    {%- assign _margin = 30 -%}
+{%- elsif _size == 'large' -%}
+    {%- assign _width = 100 -%}
+    {%- assign _margin = 0 -%}
 {%- else -%}
     {%- assign _width = 80 -%}
     {%- assign _margin = 10 -%}
