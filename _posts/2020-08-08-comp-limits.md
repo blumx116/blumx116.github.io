@@ -2,7 +2,7 @@
 layout: post
 title:  "The Computational Limits of Deep Learning"
 category: review
-date:   2019-08-09 21:47:00 -0600
+date:   2020-08-09 21:47:00 -0600
 categories: blog
 cover-photo: assets/images/comp-limits-header.png
 cover-photo-alt: "Computational Limits Header"
