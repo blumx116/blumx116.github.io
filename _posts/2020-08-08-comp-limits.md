@@ -6,7 +6,7 @@ date:   2020-08-09 21:47:00 -0600
 categories: blog
 cover-photo: assets/images/comp-limits-header.png
 cover-photo-alt: "Computational Limits Header"
-icon: fa-book
+icon: fa-flask
 ---
 
 Since AlexNet made world news in 2012, advances in Artificial Intelligence have created headline after headline.

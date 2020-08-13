@@ -1,0 +1,14 @@
+Roadmap:
+  x Portfolio Page
+
+Icons:
+  x fa-book : paper review
+  x fa-pencil : blog
+  x fa-university : academic works
+  x fa-home or fa-user: home / about me
+  x fa-road: RL
+  x fa-angle-double-up : Meta-learning
+  x fa-paragraph : NLP
+  x fa-image : CV
+  x fa-flask : theory & other
+  x fa-palette  : generative models
