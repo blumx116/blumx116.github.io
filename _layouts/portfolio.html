@@ -1,0 +1,149 @@
+---
+layout: default
+cover-photo: assets/images/bannerHD.jpg
+cover-photo-alt: "Beautiful Beach Photograph by Taiwan Nans0410"
+icon: fa-home
+title: About Blum
+subtitle : something
+content : a
+---
+
+{%- include header.html scrolly_nav=_posts -%}
+
+<div id="main">
+    {%- include section.html title=page.title photo=page.cover-photo photo-alt=page.cover-photo-alt auto-header=page.auto-header content=page.content -%}
+
+    <div class="portfolio">
+        <div class="portfolio-item one" onmouseover="flood(this);" onmouseout="clean(this);" data-tilt data-tilt-max="3" data-tilt-speed="5" data-tilt-perspective="2000">
+            <div class="portfolio-image-container">
+                <img src="assets/images/graddesc.jpeg">
+            </div>
+            <div class="portfolio-text-container">
+            </div>
+        </div>
+        <div class="portfolio-item one" onmouseover="flood(this);" onmouseout="clean(this);" data-tilt data-tilt-max="3" data-tilt-speed="5" data-tilt-perspective="2000">
+            <div class="portfolio-image-container">
+                <img src="assets/images/baidu.jpeg">
+            </div>
+            <div class="portfolio-text-container">
+                <a href="https://github.com/blumx116/SMART">
+                    <h1>
+                        Recursive Hierarchical Reinforcement Learning through Composition
+                    </h1>
+                </a>
+                <br/>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at nulla dictum eros tempor feugiat pellentesque vitae neque. Aenean turpis mi, ultrices ut turpis et, auctor molestie mi.
+                    Nullam tellus lacus, iaculis sit amet turpis a, sagittis varius orci. Aliquam rutrum vehicula pretium. Etiam ac fermentum lectus, quis mattis nisl. Sed at tellus risus.
+                </p>
+            </div>
+        </div>
+        <div class="portfolio-item one" onmouseover="flood(this);" onmouseout="clean(this);" data-tilt data-tilt-max="3" data-tilt-speed="5" data-tilt-perspective="2000">
+            <div class="portfolio-image-container">
+                <img src="assets/images/shapelets_placeholder.png">
+            </div>
+            <div class="portfolio-text-container">
+                This image is a placeholder, I'm just using it because it looks really good. Please don't sue me.
+            </div>
+        </div>
+        <div class="portfolio-item one" onmouseover="flood(this);" onmouseout="clean(this);" data-tilt data-tilt-max="3" data-tilt-speed="5" data-tilt-perspective="2000">
+            <div class="portfolio-image-container">
+                <img src="assets/images/foodsby2.jpeg">
+            </div>
+            <div class="portfolio-text-container">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<style>
+    .portfolio {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        background-color: #dce3e2;
+        z-index: 0;
+        transition: all 0.5s ease-in;
+
+        -webkit-transition: background-color 1000ms linear;
+        -ms-transition: background-color 1000ms linear;
+        transition: background-color 1000ms linear;
+    }
+
+    .portfolio-item {
+        min-height: 750px;
+        max-height: 7500px;
+        width: 40%;
+        margin: 3em 5% 3em 5%;
+        box-shadow: 20px 50px 50px rgba(0, 0, 0, 0.5);
+        background-color: #dce3e2;
+        /* transition: all 0.5s ease-in; */
+        z-index: 1;
+
+        -webkit-transition: background-color 1000ms linear;
+        -ms-transition: background-color 1000ms linear;
+        transition: background-color 1000ms linear;
+    }
+
+    @media only screen and (max-width: 1000px) {
+        .portfolio-item {
+            width: 80%;
+            margin: 2em 10% 2em 10%;
+            min-height: 400px;
+            max-height: 400px;
+        }
+    }
+
+    .portfolio-image-container {
+        width: 100%;
+        height: 50%;
+        object-fit: cover;
+        border-radius: inherit;
+        opacity: 100%;
+    }
+
+    .portfolio-image-container img {
+        width: 100%;
+        height: 100%;
+        border-radius: inherit;
+    }
+
+    .portfolio-text-container {
+        width: 100%;
+        min-height: 50%;
+        max-height: 50%;
+        background: -moz-linear-gradient(-45deg, rgba(226, 169, 229, 0.15) 15%, rgba(43, 148, 229, 0.15) 100%);
+        background: -webkit-linear-gradient(-45deg, rgba(226, 169, 229, 0.15) 15%, rgba(43, 148, 229, 0.15) 100%);
+        background: linear-gradient(135deg, rgba(226, 169, 229, 0.15) 15%, rgba(43, 148, 229, 0.15) 100%);
+        padding: 1em;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .portfolio-text-container h1 {
+        color : #41484c;
+        font-size: 150%;
+        text-decoration: underline;
+        text-underline-style: dotted;
+    }
+
+    .portfolio-text-container p {
+        color : #1b1f23;
+        font-size: 75%;
+    }
+
+    .one {
+        background: -moz-linear-gradient(-45deg, rgba(226, 169, 229, 0.15) 15%, rgba(43, 148, 229, 0.15) 100%);
+        background: -webkit-linear-gradient(-45deg, rgba(226, 169, 229, 0.15) 15%, rgba(43, 148, 229, 0.15) 100%);
+        background: linear-gradient(135deg, rgba(226, 169, 229, 0.15) 15%, rgba(43, 148, 229, 0.15) 100%);
+    }
+
+    .filled_one {
+        background: -moz-linear-gradient(-45deg, rgba(226, 169, 229, 1) 15%, rgba(43, 148, 229, 1) 100%);
+        background: -webkit-linear-gradient(-45deg, rgba(226, 169, 229, 1) 15%, rgba(43, 148, 229, 1) 100%);
+        background: linear-gradient(135deg, rgba(226, 169, 229, 1) 15%, rgba(43, 148, 229, 1) 100%);
+    }
+
+</style>

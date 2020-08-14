@@ -119,16 +119,28 @@
 
 })(jQuery);
 
+$ = jQuery;
+
 function contract_bar(el) {
-	el = jQuery(el);
+	el = $(el);
 	el.find('.col-right').addClass('collapsed-td');
 	el.addClass('collapsed-header');
 	jQuery("#main, #footer").css('margin-left', '100px');
 }
 
 function expand_bar(el) {
-	el = jQuery(el);
+	el = $(el);
 	el.find('.collapsed-td').removeClass('collapsed-td');
 	el.removeClass('collapsed-header');
 	jQuery("#main, #footer").css('margin-left', '400px');
+}
+
+function flood(el) {
+	$(el).addClass('filled_one');
+	$('.portfolio').addClass('filled_one');
+}
+
+function clean(el) {
+	$(el).removeClass('filled_one');
+	$('.portfolio').removeClass('filled_one');
 }

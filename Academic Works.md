@@ -1,5 +1,5 @@
 ---
-layout: blog
+layout: portfolio
 title: Academic Works
 icon: fa-university
 category: project
