@@ -983,7 +983,7 @@
 				.blog-subtitle {
 					height: 20%;
 					font-size: 70%;
-					color: #888888;
+					color: #bbbbbb;
 
 					@include breakpoint(narrower) {
 						display: none;
@@ -1018,7 +1018,7 @@
 					@include breakpoint(narrow) {
 						font-size: 100%;
 						line-height: 120%;
-						color: #999999;
+						color: #bbbbbb;
 						height: 100%;
 						overflow: hidden;
 						text-overflow: ellipsis;
@@ -1026,7 +1026,7 @@
 					@include breakpoint(narrower) {
 						font-size: 100%;
 						line-height: 120%;
-						color: #999999;
+						color: #bbbbbb;
 						height: 100%;
 						overflow: hidden;
 						text-overflow: ellipsis;
@@ -1035,7 +1035,7 @@
 					@include breakpoint(mobile) {
 						font-size: 100%;
 						line-height: 120%;
-						color: #999999;
+						color: #bbbbbb;
 						height: 100%;
 						overflow: hidden;
 						text-overflow: ellipsis;
@@ -1047,7 +1047,7 @@
 					display: flex;
 					justify-content: center;
 					align-items: center;
-					color: #999999;
+					color: #bbbbbb;
 
 					@include breakpoint(narrower) {
 						display: none;
