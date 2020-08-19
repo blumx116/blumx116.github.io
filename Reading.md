@@ -1,5 +1,5 @@
 ---
-layout: blog
+layout: new_blog
 title: A Paper A Day
 icon: fa-book
 category: review

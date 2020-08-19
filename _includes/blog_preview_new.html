@@ -17,7 +17,7 @@ content
 {%- capture _photo -%}
 <img src="{{- include.photo | relative_url -}}" alt="{{- include.photo-alt -}}" class="fading-image">
 {%- endcapture -%}
-{%- assign _class = 'shade-one <cover></cover> dark' -%}
+{%- assign _class = 'shade-one' -%}
 {%- else -%}
 {%- assign _text_width = 100 -%}
 {%- assign _photo_width = 0 -%}
@@ -42,7 +42,7 @@ content
 {%- endcapture -%}
 {%- endif -%}
 
-<section id="{{- _slug -}}" class="{{- _class -}}">
+<section id="{{- _slug -}}" class="{{- _class -}}" style="width: 50%;">
     <div class="stacker">
         {{- _photo -}}
         <div class="fading-text" style="width: {{- _text_width -}}%; float:left">

@@ -1,0 +1,35 @@
+{%- comment -%}
+Include vars:
+title
+subtitle
+photo
+photo-alt
+auto-header
+content
+{%- endcomment -%}
+
+{%- assign _title = include.title | default: 'Untitled' -%}
+{%- assign _slug = include.title | strip_html | slugify | default: 'untitled' -%}
+
+
+<div class="blog-preview" id="{{- _slug -}}">
+    <img class="fading-image" src="{{- include.photo | relative_url -}}" alt="{{- include.photo-alt -}}" />
+    <div class="fading-text">
+        <div class="blog-header">
+            <div class="blog-title">
+                {%- if include.auto-header == null or include.auto-header == 'use-title' -%}
+                    {{- _title -}}
+                {%- else -%}
+                    {{- include.auto-header -}}
+                {%- endif -%}
+            </div>
+            <div class="blog-subtitle">
+                {{- include.subtitle -}}
+                {%- if include.credit -%}
+                    <a href="{{- include.credit -}}">(Image Credit)</a>
+                {%- endif -%}
+            </div>
+        </div>
+        {{- include.content -}}
+    </div>
+</div>

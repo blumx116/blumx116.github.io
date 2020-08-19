@@ -702,11 +702,11 @@
 			}
 
 			&.shade-one {
-				background-color: #81918E;
+				background-color: #ffffff;
 			}
 
 			&.shade-two {
-				background-color: #f5fafa;
+				background-color: #ffffff; //#f5fafa;
 			}
 
 			&.shade-three {
@@ -902,24 +902,99 @@
 }
 // trying to replicate this : https://www.w3schools.com/howto/howto_css_image_overlay.asp
 
+.blog-container {
+	display: flex;
+	flex-wrap: wrap;
+
+	.blog-preview {
+		background-color: white;
+		min-height: 500px;
+		max-height: 500px;
+		padding: 1em;
+		position: relative;
+
+		width: 50%;
+		@include breakpoint(narrow) {
+			width: 100%;
+		}
+
+		.fading-text {
+			opacity: 0;
+			z-index: 2;
+			position: absolute;
+			left: 0;
+			top: 0;
+			height: 100%;
+			max-height: 100%;
+			width: 100%;
+
+
+			text-align: center;
+			text-overflow: ellipsis;
+
+			background-color: #003152;
+			transition: opacity 0.5s ease;
+			padding: 1em;
+
+			header {
+				p {
+					font-size: 70%;
+					color: #888888;
+				}
+
+				h2 {
+					font-size: 120%;
+					color: #ffffff;
+				}
+			}
+
+			p {
+				font-size: 80%;
+				color: #ffffff;
+			}
+		}
+
+		.fading-text:hover {
+			opacity: 0.95;
+		}
+
+		.fading-image {
+			z-index: 1;
+			object-fit: contain;
+			height: 100%;
+			width: 100%;
+
+			transition: opacity 0.5s ease;
+		}
+
+		.fading-image:hover {
+			opacity: 0.05;
+		}
+
+
+	}
+
+
+}
 
 /*** trying modifications.scss in same file as jekyll ***/
+/*
 .fading-image {
 	z-index: 1;
 	position: absolute;
 	top: 0;
 	bottom: 0;
 	left: 0;
-	bottom: 0;
 	opacity: 1;
 	transition: 0.5s ease;
-	min-height: 600px;
-	max-height: 600px;
-	min-width: 100%;
-	object-fit: cover;
+	height: 100%;
+	width: 100%;
+	object-fit: contain;
+	color: #ffffff;
+
 }
 .stacker:hover .fading-image {
-	opacity: 0.1;
+	opacity: 0;
 }
 .fading-text {
 	z-index: 2;
@@ -941,6 +1016,7 @@
 	position: relative;
 	min-height: 600px;
 }
+ */
 
 #nav {
 	table {
