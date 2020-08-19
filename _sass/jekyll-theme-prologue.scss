@@ -497,7 +497,12 @@
 		.top {
 			/* @include vendor('flex-grow', '1'); */
 			height: 93%;
-			overflow: hidden;
+			overflow-y: scroll;
+			overflow-x: hidden;
+		}
+
+		.top::-webkit-scrollbar {
+			display: none;
 		}
 
 		.bottom {
