@@ -30,6 +30,13 @@ content
                 {%- endif -%}
             </div>
         </div>
-        {{- include.content -}}
+        <div class="blog-preview-content">
+            <div class="blog-preview-main">
+                {{- include.content -}}
+            </div>
+            <div class="blog-preview-link">
+                {{- _link -}}
+            </div>
+        </div>
     </div>
 </div>

@@ -914,8 +914,24 @@
 		position: relative;
 
 		width: 50%;
+
 		@include breakpoint(narrow) {
 			width: 100%;
+			padding-top: 0;
+		}
+
+		@include breakpoint(narrower) {
+			min-height: 400px;
+			max-height: 400px;
+			width: 100%;
+			padding-top: 0;
+		}
+
+		@include breakpoint(mobile) {
+			min-height: 400px;
+			max-height: 400px;
+			width: 100%;
+			padding-top: 0;
 		}
 
 		.fading-text {
@@ -936,21 +952,107 @@
 			transition: opacity 0.5s ease;
 			padding: 1em;
 
-			header {
-				p {
-					font-size: 70%;
-					color: #888888;
-				}
+			.blog-header {
+				height: 35%;
+				padding: 1em 0;
 
-				h2 {
+				.blog-title {
+					height: 80%;
 					font-size: 120%;
 					color: #ffffff;
+
+					@include breakpoint(narrower) {
+						height: 100%;
+						font-size: 100%;
+					}
+
+					@include breakpoint(narrow) {
+						height: 100%;
+						font-size: 100%;
+					}
+					@include breakpoint(mobile) {
+						height: 90%;
+						font-size: 100%;
+					}
+				}
+
+				.blog-subtitle {
+					height: 20%;
+					font-size: 70%;
+					color: #888888;
+
+					@include breakpoint(narrower) {
+						display: none;
+
+					}
+
+
+					@include breakpoint(mobile) {
+						display: none;
+					}
 				}
 			}
 
-			p {
-				font-size: 80%;
-				color: #ffffff;
+			.blog-preview-content {
+				height: 65%;
+				font-size: 70%;
+
+				@include breakpoint(narrower) {
+					padding-top: 1em;
+				}
+				@include breakpoint(mobile) {
+					padding-top: 1em;
+				}
+
+				.blog-preview-main {
+					height: 80%;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					color: #ffffff;
+
+					@include breakpoint(narrow) {
+						font-size: 100%;
+						line-height: 120%;
+						color: #999999;
+						height: 100%;
+						overflow: hidden;
+						text-overflow: ellipsis;
+					}
+					@include breakpoint(narrower) {
+						font-size: 100%;
+						line-height: 120%;
+						color: #999999;
+						height: 100%;
+						overflow: hidden;
+						text-overflow: ellipsis;
+					}
+
+					@include breakpoint(mobile) {
+						font-size: 100%;
+						line-height: 120%;
+						color: #999999;
+						height: 100%;
+						overflow: hidden;
+						text-overflow: ellipsis;
+					}
+				}
+
+				.blog-preview-link {
+					height: 20%;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					color: #999999;
+
+					@include breakpoint(narrower) {
+						display: none;
+					}
+
+					@include breakpoint(mobile) {
+						display: none;
+					}
+				}
 			}
 		}
 
@@ -965,11 +1067,26 @@
 			width: 100%;
 
 			transition: opacity 0.5s ease;
+
+			@include breakpoint(narrow) {
+				object-fit: cover;
+			}
+
+			@include breakpoint(narrower) {
+				object-fit: cover;
+			}
+
+			@include breakpoint(mobile) {
+				object-fit: cover;
+			}
 		}
+
+
 
 		.fading-image:hover {
 			opacity: 0.05;
 		}
+
 
 
 	}
