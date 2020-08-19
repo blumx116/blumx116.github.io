@@ -948,9 +948,13 @@
 			text-align: center;
 			text-overflow: ellipsis;
 
-			background-color: #003152;
+			background-color: #536872;
 			transition: opacity 0.5s ease;
 			padding: 1em;
+
+			a:hover {
+				color: #E27689;
+			}
 
 			.blog-header {
 				height: 35%;
@@ -1081,59 +1085,12 @@
 			}
 		}
 
-
-
 		.fading-image:hover {
 			opacity: 0.05;
 		}
-
-
-
 	}
-
-
 }
 
-/*** trying modifications.scss in same file as jekyll ***/
-/*
-.fading-image {
-	z-index: 1;
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	opacity: 1;
-	transition: 0.5s ease;
-	height: 100%;
-	width: 100%;
-	object-fit: contain;
-	color: #ffffff;
-
-}
-.stacker:hover .fading-image {
-	opacity: 0;
-}
-.fading-text {
-	z-index: 2;
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	opacity: 0;
-	transition: 0.5s ease;
-	min-height: 100%;
-	max-height: 100%;
-	min-width: 100%;
-	max-width: 100%;
-	padding-top: 3em;
-}
-.stacker:hover .fading-text{
-	opacity: 1;
-}
-.stacker {
-	position: relative;
-	min-height: 600px;
-}
- */
 
 #nav {
 	table {
