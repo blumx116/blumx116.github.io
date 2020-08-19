@@ -495,12 +495,15 @@
 		width:  400px;
 
 		.top {
-			@include vendor('flex-grow', '1');
+			/* @include vendor('flex-grow', '1'); */
+			height: 93%;
+			overflow: hidden;
 		}
 
 		.bottom {
-			@include vendor('flex-shrink', '0');
-			padding: 1.5em 0 0.75em 0;
+			/* @include vendor('flex-shrink', '0'); */
+			height: 7%;
+			/* padding: 1.5em 0 0.75em 0; */
 
 			> :last-child {
 				margin-bottom: 0;
