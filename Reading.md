@@ -1,6 +1,6 @@
 ---
 layout: new_blog
-title: A Paper A Day
+title: Best Paper Today
 icon: fa-book
 category: review
 order: 1
