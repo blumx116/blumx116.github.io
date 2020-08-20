@@ -2,12 +2,11 @@
 layout: post
 title:  "Episodic Curiosity through Reachability"
 category: review
-date:   2020-08-12 22:54:00 -0600
+date:   2020-08-11 22:54:00 -0600
 categories: blog
 cover-photo: assets/images/reachability-header.png
 cover-photo-alt: "Reachability for Exploration Header Photo"
 icon: fa-road
----
 ---
 
 One of the largest hindrances in reinforcement learning has been solving problems with sparse rewards: how do you know if you're doing the right thing if you don't get any feedback?
