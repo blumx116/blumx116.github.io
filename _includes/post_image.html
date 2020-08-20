@@ -1,10 +1,10 @@
 {%- comment -%}
 Include vars:
     photo
-    photo-alt
     comment
 optional:
     size
+    photo-alt
 {%- endcomment -%}
 
 
@@ -12,6 +12,12 @@ optional:
     {%- assign _size = 'medium' -%}
 {%- else -%}
     {%- assign _size = include.size -%}
+{%- endif -%}
+
+{%- if include.alt == '' -%}
+    {%- assign _alt = include.photo -%}
+{%- else -%}
+    {%- assign _alt = include.photo-alt -%}
 {%- endif -%}
 
 {%- if _size == 'small' -%}
@@ -31,7 +37,7 @@ optional:
 
 <br/>
 <figure style="width: {{- _width -}}%; text-align: center;  margin-left: {{- _margin -}}%;" >
-    <img style="width: 100%; " src="{{- site.baseurl -}}/assets/images/{{- include.photo -}}" alt="{{- include.photo-alt -}}" class="post-image" />
+    <img style="width: 100%; " src="{{- site.baseurl -}}/assets/images/{{- include.photo -}}" alt="{{- _alt -}}" class="post-image" />
     <br/>
     {%- if include.comment != "" %}
         {{- include.comment -}}
