@@ -23,7 +23,7 @@ Yoshua Bengio's "consciousness prior" attempts to turn this psychological princi
  
 ## Background
 
-In recent discussions of neuroscience, the concept of consciousness being intrinsically linked is becoming increasingly popular.
+In recent discussions of neuroscience, the concept of consciousness as intrinsically linked is becoming increasingly popular.
 To clarify, here, we're not talking about subjective experience (like qualia) or free-will or anything, solely the idea of what you are 'aware of' at any given moment.
 Bengio relates this to Daniel Kahnemann's concepts of 'System 1' and 'System 2' from his book 'Thinking, Fast and Slow' (which you should totally read by the way).
 System 1 handles subconscious computations that are tough to define: instantly recoiling from heat or recognizing an apple as an apple.
@@ -38,7 +38,7 @@ Either way, Bengio argues that it may be useful to have a secondary system that'
 
 This paper essentially argues for a 3-step process for implementing this.
  1. *Extracting a subconscious state*: Bengio begins by assuming that we have some high-level representation of the world $$h_{t-1}$$ and some observation $$x_t$$. He recommends that your new representation of the world $$h_{t}$$ should be a function of your previous representation and your observation $$F(x_t, h_{t-1})$$. Because this sounds a lot like an RNN, he dubs this the representation RNN, with $$h_t$$ being the unconscious representation state.
- 2. *Exttracting a conscious state*: If $$h_t$$ is composed of a set of elements, then we can select a subset of it to form the conscious state. Called $$c_t$$, he suggests that the update rule combines the unconscious representation, your conscious state, some memory and some randomness. He calls this process the *consciousness process*. The idea is that $$c_t$$ is probably pretty small, so we can afford to do more expensive computations on it.
+ 2. *Extracting a conscious state*: If $$h_t$$ is composed of a set of elements, then we can select a subset of it to form the conscious state. Called $$c_t$$, he suggests that the update rule combines the unconscious representation, your conscious state, some memory and some randomness. He calls this process the *consciousness process*. The idea is that $$c_t$$ is probably pretty small, so we can afford to do more expensive computations on it.
  3. *Remembering the past*: The author suggests committing conscious states to some form of memory, which may or may not be parametric.
  4. *Factor Graphs*: Once we have a limited number of variables in our consciousness, we can run something like a sparse factor graph on it.
  
