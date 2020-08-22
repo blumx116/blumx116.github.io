@@ -46,7 +46,7 @@ However, there are many elements of an environment that can be difficult to pred
 
 This paper tries to define 'newness' not by predictability, but by 'distance'.
 They say that one observation is 'distant' from another if it takes a lot of actions to get from one of the corresponding states to another.
-For instance, as I type this, I have a lot of actions (keystrokes) left that I need to take before I finish this review, so the algorithm would say that I"m pretty far from finishing.
+For instance, as I type this, I have a lot of actions (keystrokes) left that I need to take before I finish this review, so the algorithm would say that I'm pretty far from finishing.
 
 To this end, the authors train a comparator network, which they refer to as an R-network, that learns to approximate the distance between two observations.
 Novel observations are stored in an episodic memory, and the agent is rewarded more if its observations are distant from those in the episodic memory.
@@ -57,7 +57,7 @@ Novel observations are stored in an episodic memory, and the agent is rewarded m
 ## Details
 
 The authors structure their R-network as a siamese network. More specifically, for two observations $$o_1$$ and $$o_2$$, $$R(o_1, o_2) = C(E(o_1), E(o_2))$$.
-In otherwords, they use the same network to encode both observations, then they attempt to predict the 'distance'.
+In other words, they use the same network to encode both observations, then they attempt to predict the 'distance'.
 To get training samples for it, the authors take sequences of observations, and select two at random.
 The classifier is then supposed to do logistic regression, classifying whether or not the two observations occurred within $$k$$ timesteps of each other.
 1 means that they are likely to co-occur within $$k$$ steps and 0 means they are not.
@@ -81,7 +81,7 @@ This bonus is added to the natural rewards, and a PPO agent is trained using the
 Going back to the memory, observations are added to memory only when their aggregated closeness score is less than some threshold.
 Because we have to compare against memory at every step, they want to keep it to a small finite size.
 To achieve this, they kick out a random old memory whenever a new memory would be added while the buffer is at maximum size.
-s
+
 ## Experiments
 
 The authors experiment on a variety of environments in [VizDoom](http://vizdoom.cs.put.edu.pl/), [MuJoCo](http://mujoco.org/) and [DMLab](https://github.com/deepmind/lab).
@@ -98,7 +98,7 @@ Finally, as I read it, their method doesn't actually solve their motivating exam
 Because the module is trained to estimate guess *how likely* it is that two observations are temporally pretty close together, it would still likely put noisy TV screens as far apart - no two individual screens are that likely.
 
 ## Future Directions
-There are a couple of immediate directiosn where one could try to extend this work.
+There are a couple of immediate directions where one could try to extend this work.
 Probably the most obvious direction is combining it with multi-episodic exploration so that it doesn't go to the same states every episode.
 This would likely simply take the form of adding this intrinsic reward to another.
 
