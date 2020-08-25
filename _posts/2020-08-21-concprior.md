@@ -2,7 +2,7 @@
 layout: post
 title:  "The Consciousness Prior"
 category: review
-date:   2020-08-17 14:06:00 -0600
+date:   2020-08-21 14:06:00 -0600
 categories: blog
 cover-photo: assets/images/concprior-header.png
 cover-photo-alt: "Consciousness Prior Header Photo"

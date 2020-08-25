@@ -2,7 +2,7 @@
 layout: post
 title:  "Neural Episodic Control"
 category: review
-date:   2020-08-18 14:06:00 -0600
+date:   2020-08-22 14:06:00 -0600
 categories: blog
 cover-photo: assets/images/epcontrol-header.png
 cover-photo-alt: "NEC Header Photo"
