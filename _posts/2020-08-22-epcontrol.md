@@ -140,4 +140,4 @@ It's entirely possible that just doing raw pixel similarity gets you most of the
 I'm sure that wouldn't sell, because that's just a minor update on the tabular algorithm, which isn't fashionable.
 I think that the goal with algorithms should always be to get the greatest results with the most flexibility and the least complexity, so that's probably worth checking.
 
-Overall, it's an interesting idea, and I appreciate that they found a way to make it (slightly) more computationally tractable using KB-trees, but I'm not super sold it's the way forward.
+Overall, it's an interesting idea, and I appreciate that they found a way to make it (slightly) more computationally tractable using KD-trees, but I'm not super sold it's the way forward.
