@@ -9,7 +9,7 @@ cover-photo-alt: "Consciousness Prior Header Photo"
 icon: fa-flask
 ---
 
-Recent psychology suggests that what we think of as conscious thought is may simply be selective attention paid to certain (mental) objects, with many other things being ignored by our conscious mind.
+Recent psychology suggests that what we think of as conscious thought may simply be selective attention paid to certain (mental) objects, with many other things being ignored by our conscious mind.
 Yoshua Bengio's "consciousness prior" attempts to turn this psychological principle in to a useful machine learning principle, by using a subset of the available information to model dynamics using a sparse factor graph.
 
 ----------------------------
