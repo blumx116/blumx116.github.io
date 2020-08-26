@@ -5,11 +5,28 @@ layout: default
 {%- include header.html scrolly_nav=_sections -%}
 <!-- Main -->
 <div id="main">
-	{%- if page.content != "" -%}
-		{%- include section.html title=page.title photo=page.cover-photo photo-alt=page.cover-photo-alt auto-header=page.auto-header content=page.content -%}
-	{%- endif -%}
-	<!-- Sections -->
-	{%- for _section in _sections -%}
-		{%- include section.html title=_section.title photo=_section.cover-photo photo-alt=_section.cover-photo-alt auto-header=_section.auto-header content=_section.content -%}
-	{%- endfor -%}
+	<div id="about-title">
+		<div id="about-image-container" data-tilt data-tilt-max="3" data-tilt-speed="5" data-tilt-perspective="2000">
+			<div id="about-image-border">
+				<img src="{{- site.baseurl -}}/assets/images/me.jpg" id="mejpg">
+			</div>
+		</div>
+
+		<div id="about-text-container" >
+			<div id="about-text-border" data-tilt data-tilt-max="3" data-tilt-speed="5" data-tilt-perspective="2000">
+				<h1>About Carter Blum</h1>
+				<br/>
+				I'm a current Master's student at the <a href="https://twin-cities.umn.edu/">University of Minnesota</a> working with <a href="http://vision.psych.umn.edu/users/schrater/PaulSchrater.htm">Prof. Paul Schrater</a>.
+				Last year, I spent time working in Baidu's Business Intelligence Lab under <a href="http://datamining.rutgers.edu/">Prof. Hui Xiong</a> in Beijing. and I'm hoping to pursue a PhD in the near future.
+				<br/><br/>
+
+				I am generally interested in reinforcement and meta-learning because I see these topics as deeply related to how we interact with the real world.
+				I think that there is a lot of value to be added by adding structure to these models, so I'm particularly fascinated with model-based RL, causal reasoning, hierarchical RL and representation learning.
+				<br/><br/>
+
+				This site is still under construction, but, when complete, you'll find some of my larger projects in <a href="{{- site.baseurl -}}/Academic%20Works.html">Academic Works</a>, as well as some other ideas that I'm spitballing in the <a href="{{- site.baseurl -}}/Blog.html">Blog</a> section.
+				I also review a paper every day, where I try to provide an intuitive and casual explanation of papers for people who have developed a background but are looking for more exposure to new ideas.
+			</div>
+		</div>
+	</div>
 </div>
