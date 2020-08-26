@@ -6,7 +6,7 @@ date:   2020-08-24 14:06:00 -0600
 categories: blog
 cover-photo: assets/images/metagenrl-header.png
 cover-photo-alt: "MetaGenRL Header Photo"
-icon: fa-brain
+icon: fa-angle-double-up
 ---
 
 One interesting aspect of reinforcement learning is that, while the value functions, Q-functions and policies are all learned automatically, the underlying algorithms, such as REINFORCE or Q-learning are not.
