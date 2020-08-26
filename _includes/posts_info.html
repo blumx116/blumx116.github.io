@@ -1,0 +1,23 @@
+{%- comment -%}
+Include vars:
+    category
+{%- endcomment -%}
+{%- assign _posts = site.posts | sort: 'date' | reverse -%}
+
+<div class="blog-container">
+    {%- for _post in _posts -%}
+    {%- if _post.category == include.category -%}
+    {%- capture _title -%}
+    <a href="{{- _post.url | absolute_url -}}">{{- _post.title -}}</a>
+    {%- endcapture -%}
+    {%- capture _subtitle -%}
+    {% if _post.author -%}{{- _post.author }} | {% endif %}
+    {{- _post.date | date_to_long_string -}}
+    {%- endcapture -%}
+    {%- capture _content -%}{{- _post.excerpt | strip_html | truncatewords: 100 -}}{%- endcapture -%}
+    {%- capture _link -%}<a href="{{- _post.url | absolute_url -}}">read more</a>{%- endcapture -%}
+    {%- include blog_preview_newest.html title=_title subtitle=_subtitle content=_content photo=_post.cover-photo photo-alt=_post.cover-photo-alt link=_link -%}
+    {%- endif -%}
+    {%- endfor -%}
+</div>
+
