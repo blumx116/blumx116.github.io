@@ -59,7 +59,7 @@ In order to understand what the authors are testing, it's important to understan
  
 To test each of these, they come up with a number of different NLP tasks, which are as follows:
 
-#### Justice 
+### Justice 
 These tasks test whether the AI is able to identify scenarios where it should treat people fairly.
 The authors divide this in to two parts: 'impartiality' (treating people the same without respect to their superficial qualities) and 'desert' (making sure that people get what they deserve or are entitled to).
 One entertaining part of this paper is that they give computer science allegories for different ethical principles.
@@ -70,7 +70,7 @@ Some sample problems are shown below:
 {%- include post_image.html photo="ethicsdata-justice.png" comment="It's not hard to think of scenarios where these questions might have different answers - for instance, what if you stole a candy bar while also trespassing?" -%}
 
 
-#### Virtues
+### Virtues
 
 The authors explain virtue ethics as emphasizing whether people exhibit good and bad character traits (for this, they site Aristotle from 340 BC, which is great).
 The authors ask the model to predict which virtues or vices might be present in a given example.
@@ -82,16 +82,16 @@ Example questions below:
 
 {%- include post_image.html photo="ethicsdata-virtues.png" comment="Some adjectives don't seem like virtues or vices. For instance, how would you classify 'awkward'?" -%}
 
-#### Deontology
+### Deontology
 
 If you've ever met someone who religiously adheres to rules, then you probably have a decent idea of how deontology works.
 The authors create two tasks to test this area.
 In the first task, the AI has to identify in what situations it is still 'obligated' to comply with a request.
 In the second task, the AI has to recognize what rules & obligations can be expected of people in different roles.
 
-{%- include post_image.html photo="ethicsdata-deontology.png" comment="In some way, these feel almost like tests on social skills - what's a valid excuse for a request?" -%}
+{%- include post_image.html photo="ethicsdata-deontology.png" size='small' comment="In some way, these feel almost like tests on social skills - what's a valid excuse for a request?" -%}
 
-#### Utilitarianism
+### Utilitarianism
 
 You can think of utilitarianism as being defined by some utility function, where people should make actions that lead to states with a higher utility.
 For many people, the utility function would probably be to maximize total human happiness (although, in practice, nobody is truly that altruistic).
@@ -101,7 +101,7 @@ As always, example shown below:
 {%- include post_image.html photo="ethicsdata-utilitarianism.png" -%}
 
 
-#### Common sense
+### Common sense
 
 In these tasks, the authors provide a number of short stories. Some are one or two sentences, and are generated using Mechanical Turk.
 Longer ones, (1-6 paragraphs in length) are curated from Reddit using filters (I haven't checked, but I strongly suspect that [reddit.com/r/AITA](reddit.com/r/AITA) was a major source here).
@@ -109,7 +109,6 @@ For the mechanical turk samples, the authors are instructed to write scenarios w
 The reddit posts are taken from subreddits where users describe a scenario and readers vote whether or not the author acted wrongly.
 
 The agent has to identify whether or not the subject in the stories acted correctly.
-
 As noted above, all samples are generated using workers from Amazon's Mechanical Turk, unless noted otherwise. 
 The authors note that the total dataset has 130K samples in it, which is quite impressive.
 For each task, problems are separated in to easy and hard sets.
