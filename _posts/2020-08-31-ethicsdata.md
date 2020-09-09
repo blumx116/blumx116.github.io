@@ -6,7 +6,7 @@ date:   2020-08-31 19:37:00 -0600
 categories: blog
 cover-photo: assets/images/ethicsdata-header.png
 cover-photo-alt: "ETHICS Header Photo"
-icon: fa-flask
+icon: fa-paragraph
 ---
 
 How can we test how ethical an AI system is? 
