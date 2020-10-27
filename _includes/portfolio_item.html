@@ -1,0 +1,38 @@
+{%- comment -%}
+  Include vars:
+    title
+    primary_link
+    ref1
+    ref1link
+    ref2
+    ref2link
+    text
+    img
+{%- endcomment -%}
+
+<div class="portfolio-item one" onmouseover="flood(this);" onmouseout="clean(this);" data-tilt data-tilt-max="3" data-tilt-speed="5" data-tilt-perspective="2000">
+    <div class="portfolio-image-container">
+        <img src="{{- include.img -}}">
+    </div>
+    <div class="portfolio-text-container">
+        <a href="{{- include.primary_link -}}">
+            <h1>
+                {{- include.title -}}
+            </h1>
+        </a>
+        <br/>
+        <p>
+            <div width="100%">
+                <a href="{{- include.ref1link -}}"><b>{{- include.ref1 -}}</b></a>
+                {%- if include.ref2link and include.ref2 -%}
+                    <div style="float:right;"><a href="{{- include.ref2link -}}"><b>{{- include.ref2 -}}</b></a></div>
+                {%- endif -%}
+                <br/>
+                {%- if include.text -%}
+                    {{- text -}}
+                {%- endif -%}
+            </div>
+        </p>
+    </div>
+</div>
+

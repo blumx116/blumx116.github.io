@@ -12,47 +12,33 @@ content : a
 
 <div id="main">
     {%- include section.html title=page.title photo=page.cover-photo photo-alt=page.cover-photo-alt auto-header=page.auto-header content=page.content -%}
-
     <div class="portfolio">
-        <div class="portfolio-item one" onmouseover="flood(this);" onmouseout="clean(this);" data-tilt data-tilt-max="3" data-tilt-speed="5" data-tilt-perspective="2000">
-            <div class="portfolio-image-container">
-                <img src="assets/images/graddesc.jpeg">
-            </div>
-            <div class="portfolio-text-container">
-            </div>
-        </div>
-        <div class="portfolio-item one" onmouseover="flood(this);" onmouseout="clean(this);" data-tilt data-tilt-max="3" data-tilt-speed="5" data-tilt-perspective="2000">
-            <div class="portfolio-image-container">
-                <img src="assets/images/baidu.jpeg">
-            </div>
-            <div class="portfolio-text-container">
-                <a href="https://github.com/blumx116/SMART">
-                    <h1>
-                        Recursive Hierarchical Reinforcement Learning through Composition
-                    </h1>
-                </a>
-                <br/>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at nulla dictum eros tempor feugiat pellentesque vitae neque. Aenean turpis mi, ultrices ut turpis et, auctor molestie mi.
-                    Nullam tellus lacus, iaculis sit amet turpis a, sagittis varius orci. Aliquam rutrum vehicula pretium. Etiam ac fermentum lectus, quis mattis nisl. Sed at tellus risus.
-                </p>
-            </div>
-        </div>
-        <div class="portfolio-item one" onmouseover="flood(this);" onmouseout="clean(this);" data-tilt data-tilt-max="3" data-tilt-speed="5" data-tilt-perspective="2000">
-            <div class="portfolio-image-container">
-                <img src="assets/images/shapelets_placeholder.png">
-            </div>
-            <div class="portfolio-text-container">
-                This image is a placeholder, I'm just using it because it looks really good. Please don't sue me.
-            </div>
-        </div>
-        <div class="portfolio-item one" onmouseover="flood(this);" onmouseout="clean(this);" data-tilt data-tilt-max="3" data-tilt-speed="5" data-tilt-perspective="2000">
-            <div class="portfolio-image-container">
-                <img src="assets/images/foodsby2.jpeg">
-            </div>
-            <div class="portfolio-text-container">
-            </div>
-        </div>
+        {%- include portfolio_item.html title="Don't be a Hypocrite: Hierarchical Reinforcement Learning via Composition"
+            primary_link="https://github.com/blumx116/SMART" img="assets/images/graddesc.jpeg" ref1="Code Repository"
+            ref1link="https://github.com/blumx116/SMART" ref2="PDF (Description)"
+            ref2link="assets/pdfs/SMART_Goals_Algorithm.pdf" -%}
+
+        {%- include portfolio_item.html title="Parallelizable Reinforcement Learning for  Charging Station Recommendation"
+            primary_link="https://github.com/blumx116/Chargers" img="assets/images/baidu.jpeg" ref1="Code Repository"
+            ref1link="https://github.com/blumx116/Chargers" ref2="PDF" ref2link="assets/pdfs/Chargers_Report.pdf" -%}
+
+        {%- include portfolio_item.html title="Like a Light Switch: Conditional Weights for Meta-Learning"
+            primary_link="https://github.com/blumx116/maskedmeta" image="assets/images/graddesc.jpeg" ref1="Code Repository"
+            ref1link="https://github.com/blumx116/maskedmeta" ref2="PDF (Proposal)" ref2link="assets/pdfs/MaskedMeta_Proposal.pdf" -%}
+
+        {%- include portfolio_item.html title="Time Series Shapelet Classification through Learned Distances"
+            primary_link="https://github.com/blumx116/Chargers" img="assets/images/shapelets-header.png"
+            ref1="Code Repository" ref1link="https://github.com/blumx116/ShapeletsRefactored"
+            ref2="PDF" ref2link="assets/pdfs/Shapelets.pdf"-%}
+
+        {%- include portfolio_item.html title="Scene Prediction in Reinforcement Learning using Generative Adversarial Networks"
+            primary_link="assets/pdfs/GAN_Scene_Prediction.pdf" img="assets/images/gan-model.png"
+            ref1="PDF" ref1link="assets/pdfs/GAN_Scene_Prediction.pdf" -%}
+
+        {%- include portfolio_item.html title="Foodsby : Mobile App"
+            primary_link="https://apps.apple.com/us/app/foodsby-local-food-delivery/id875062433"
+            img="assets/images/foodsby2.jpeg" ref1="Google Play Store" ref1link="https://play.google.com/store/apps/details?id=com.foodsby.consumerApp&hl=en&gl=US"
+            ref2="Apple App Store" ref2link="https://apps.apple.com/us/app/foodsby-local-food-delivery/id875062433" -%}
     </div>
 </div>
 
