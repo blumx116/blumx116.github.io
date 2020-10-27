@@ -20,7 +20,6 @@
                 {{- include.title -}}
             </h1>
         </a>
-        <br/>
         <p>
             <div width="100%">
                 <a href="{{- include.ref1link -}}"><b>{{- include.ref1 -}}</b></a>
@@ -29,7 +28,7 @@
                 {%- endif -%}
                 <br/>
                 {%- if include.text -%}
-                    {{- text -}}
+                    {{- include.text -}}
                 {%- endif -%}
             </div>
         </p>
