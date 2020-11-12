@@ -13,7 +13,13 @@ content
 
 
 <div class="blog-preview" id="{{- _slug -}}">
-    <img class="fading-image" src="{{- include.photo | relative_url -}}" alt="{{- include.photo-alt -}}" />
+    {%- if (include.photo contains '.mp4') or (include.photo contains '.gif') -%}
+        <video class="fading-image" loop muted autoplay>
+            <source src="{{- include.photo | relative_url -}}" type="video/mp4"/>
+        </video>
+    {%- else -%}
+        <img class="fading-image" src="{{- include.photo | relative_url -}}" alt="{{- include.photo-alt -}}" />
+    {%- endif -%}
     <div class="fading-text">
         <div class="blog-header">
             <div class="blog-title">
